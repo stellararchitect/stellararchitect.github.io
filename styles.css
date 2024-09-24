@@ -28,10 +28,18 @@ h2 {
     color: #b3b3b3;
 }
 
+/* Updated image styles */
 img {
-    max-width: 100%;
-    height: auto;
+    width: 70vw;             /* Image width is 70% of viewport width */
+    max-width: 70%;          /* Ensure the image does not exceed 70% of container width */
+    height: auto;            /* Maintain aspect ratio */
     margin-bottom: 1.5em;
+    border-radius: 50%;      /* Makes the image circular */
+    object-fit: cover;       /* Ensures the image scales correctly within the circle */
+    display: block;          /* Centers the image horizontally */
+    margin-left: auto;
+    margin-right: auto;
+    aspect-ratio: 1 / 1;     /* Maintains a square aspect ratio */
 }
 
 .btn {
