@@ -17,6 +17,9 @@ h1, h2 {
 
 .band-name {
     padding: 20px 0;  /* Padding from the top */
+    font-family: 'CustomFont', sans-serif;
+    font-size: 3em;
+    margin-bottom: 0.5em;
 }
 
 /* Center the Container Vertically */
