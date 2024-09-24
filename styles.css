@@ -1,4 +1,8 @@
-/* General Styles */
+/* Global Styles */
+
+* {
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
@@ -7,45 +11,54 @@ body {
     color: #ffffff;
     font-family: 'Arial', sans-serif;
     text-align: center;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 h1, h2 {
     margin: 0;
+    padding: 0 10px; /* Prevent text from touching edges */
+    word-wrap: break-word;
 }
 
 /* Band Name at the Top */
 
 .band-name {
-    padding: 20px 0;  /* Padding from the top */
+    padding: 20px 0; /* Padding from the top */
     font-family: 'CustomFont', sans-serif;
     font-size: 3em;
     margin-bottom: 0.5em;
 }
 
-/* Center the Container Vertically */
+/* Responsive Title Font Size */
+
+.band-name h1 {
+    font-size: clamp(2em, 6vw, 3em);
+}
+
+/* Container for Album Name, Image, and Button */
 
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;  /* Centers vertically */
-    min-height: calc(100vh - 80px); /* Subtract the height of the band-name section */
+    margin-top: 20px; /* Bring closer to the title */
+    padding-bottom: 20px;
 }
 
-/* Album Name */
+/* Responsive Album Name Font Size */
 
 h2 {
-    font-size: 2em;
+    font-size: clamp(1.5em, 5vw, 2.5em);
     margin-bottom: 1em;
     color: #b3b3b3;
+    padding: 0 10px; /* Prevent text from touching edges */
 }
 
 /* Image Styles */
 
 .image-wrapper {
     width: 70vw;
-    max-width: 300px;    /* Limit image size on PC */
-    max-height: 70vw;
+    max-width: 300px; /* Limit image size on larger screens */
     margin: 0 auto 1.5em auto;
     border-radius: 50%;
     overflow: hidden;
@@ -65,50 +78,36 @@ h2 {
     background-color: #1db954;
     color: #ffffff;
     text-decoration: none;
-    font-size: 1em;
+    font-size: clamp(1em, 4vw, 1.5em);
     border-radius: 50px;
     transition: background-color 0.3s ease;
     margin-top: 1em;
+    max-width: 90%; /* Prevent button from exceeding screen width */
 }
 
 .btn:hover {
     background-color: #1ed760;
 }
 
-/* Media Queries for Responsive Design */
+/* Adjust Button Padding on Small Screens */
 
-/* Increase text and button size on mobile devices */
 @media (max-width: 600px) {
-    h1 {
-        font-size: 2em;
-    }
-
-    h2 {
-        font-size: 1.5em;
-    }
-
     .btn {
-        font-size: 1.2em;
-        padding: 20px 40px;
+        padding: 10px 20px;
     }
 }
 
-/* Adjust image size on larger screens */
-@media (min-width: 768px) {
+/* Adjust Image Size on Very Small Screens */
+
+@media (max-width: 480px) {
     .image-wrapper {
-        width: 30vw;
-        max-width: 250px;  /* Further limit image size on larger screens */
-    }
-
-    h2 {
-        font-size: 2.5em;
+        width: 80vw;
     }
 }
 
-/* Custom Font Definition */
-@font-face {
-    font-family: 'CustomFont';
-    src: url('fonts/font.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+/* Ensure Elements Don't Exceed Viewport Width */
+
+.band-name, .container, .btn, h1, h2 {
+    max-width: 100%;
+    overflow-wrap: break-word;
 }
