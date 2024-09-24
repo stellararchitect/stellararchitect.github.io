@@ -5,6 +5,7 @@
     <title>Stellar Architect - Voyage Beyond Infinity</title>
     <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer data-domain="stellararchitect.github.io" src="https://plausible.io/js/script.js"></script>
 </head>
 <body>
     <div class="band-name">
@@ -17,13 +18,14 @@
         </div>
         <!-- Buttons Container -->
         <div class="button-container">
-            <!-- First Button -->
-            <a href="https://open.spotify.com/artist/5JjXqlXvhTj9VygJ2ICuxA" class="btn">Listen now on Spotify</a>
-            <!-- Second Button -->
-            <a href="https://music.apple.com/de/artist/stellar-architect/1767974022" class="btn secondary-btn">Listen now on Apple Music</a>
-            <!-- Third Button -->
-            <a href="https://artists.landr.com/055855584793" class="btn tertiary-btn">Listen on other streaming</a>
-        </div>
+        <!-- First Button -->
+        <a href="https://open.spotify.com/artist/5JjXqlXvhTj9VygJ2ICuxA" class="btn" onclick="plausible('spotify-button-click')">Listen now on Spotify</a>
+        <!-- Second Button -->
+        <a href="https://music.apple.com/de/artist/stellar-architect/1767974022" class="btn secondary-btn" onclick="plausible('apple-music-button-click')">Listen now on Apple Music</a>
+        <!-- Third Button -->
+        <a href="https://artists.landr.com/055855584793" class="btn tertiary-btn" onclick="plausible('other-streaming-button-click')">Listen on other streaming</a>
+    </div>
+
     </div>
 </body>
 </html>
