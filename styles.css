@@ -1,3 +1,5 @@
+/* Base Styles */
+
 body {
     margin: 0;
     padding: 0;
@@ -10,41 +12,44 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;  /* Vertical centering */
-    min-height: 100vh;        /* Ensure body takes up full viewport height */
+    min-height: 100vh;        /* Full viewport height */
 }
 
 .container {
-    padding: 50px;
+    padding: 20px;  /* Adjusted for better mobile appearance */
 }
 
 h1 {
-    font-size: 3em;
+    font-size: 2.5em;
     margin-bottom: 0.5em;
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 1.5em;
     margin-bottom: 1em;
     color: #b3b3b3;
 }
 
-/* Updated image styles */
+/* Image Styles */
+
 img {
-    width: 70vw;             /* Image width is 70% of viewport width */
-    max-width: 70%;          /* Ensure the image does not exceed 70% of container width */
-    height: auto;            /* Maintain aspect ratio */
+    width: 70vw;             /* 70% of viewport width */
+    max-width: 300px;        /* Maximum width on larger screens */
+    height: auto;
     margin-bottom: 1.5em;
-    border-radius: 50%;      /* Makes the image circular */
-    object-fit: cover;       /* Ensures the image scales correctly within the circle */
-    display: block;          /* Centers the image horizontally */
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
     margin-left: auto;
     margin-right: auto;
-    aspect-ratio: 1 / 1;     /* Maintains a square aspect ratio */
+    aspect-ratio: 1 / 1;
 }
+
+/* Button Styles */
 
 .btn {
     display: inline-block;
-    padding: 15px 30px;
+    padding: 12px 24px;
     background-color: #1db954;
     color: #ffffff;
     text-decoration: none;
@@ -55,4 +60,35 @@ img {
 
 .btn:hover {
     background-color: #1ed760;
+}
+
+/* Media Queries */
+
+/* For mobile devices */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 3em;        /* Increase heading size */
+    }
+    h2 {
+        font-size: 2em;        /* Increase subheading size */
+    }
+    .btn {
+        padding: 15px 30px;    /* Larger button */
+        font-size: 1.2em;      /* Larger button text */
+    }
+    img {
+        width: 80vw;           /* Slightly larger image */
+        max-width: none;       /* Remove max-width constraint */
+    }
+}
+
+/* For desktop devices */
+@media (min-width: 1024px) {
+    img {
+        width: 40vw;           /* Smaller image on large screens */
+        max-width: 250px;      /* Adjust max-width */
+    }
+    .container {
+        padding: 50px;         /* Increase padding */
+    }
 }
