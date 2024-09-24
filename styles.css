@@ -111,3 +111,12 @@ h2 {
     max-width: 100%;
     overflow-wrap: break-word;
 }
+
+/* Custom Font Definition */
+@font-face {
+    font-family: 'CustomFont';
+    src: url('fonts/font.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
