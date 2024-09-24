@@ -18,21 +18,20 @@ h1, h2 {
     margin: 0;
     padding: 0 10px; /* Prevent text from touching edges */
     word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 /* Band Name at the Top */
 
 .band-name {
     padding: 20px 0; /* Padding from the top */
-    font-family: 'CustomFont', sans-serif;
-    font-size: 3em;
-    margin-bottom: 0.5em;
+    /* Remove font-size and margin-bottom to avoid conflicts */
 }
 
-/* Responsive Title Font Size */
-
 .band-name h1 {
+    font-family: 'CustomFont', sans-serif;
     font-size: clamp(2em, 6vw, 3em);
+    margin-bottom: 0.5em;
 }
 
 /* Container for Album Name, Image, and Button */
@@ -41,7 +40,7 @@ h1, h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px; /* Bring closer to the title */
+    margin-top: 10px; /* Bring even closer to the title */
     padding-bottom: 20px;
 }
 
@@ -58,7 +57,7 @@ h2 {
 
 .image-wrapper {
     width: 70vw;
-    max-width: 300px; /* Limit image size on larger screens */
+    max-width: 250px; /* Reduce max-width for smaller desktops */
     margin: 0 auto 1.5em auto;
     border-radius: 50%;
     overflow: hidden;
@@ -78,11 +77,12 @@ h2 {
     background-color: #1db954;
     color: #ffffff;
     text-decoration: none;
-    font-size: clamp(1em, 4vw, 1.5em);
+    font-size: clamp(1em, 4vw, 1.2em);
     border-radius: 50px;
     transition: background-color 0.3s ease;
     margin-top: 1em;
     max-width: 90%; /* Prevent button from exceeding screen width */
+    white-space: normal; /* Allow button text to wrap if necessary */
 }
 
 .btn:hover {
