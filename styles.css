@@ -85,42 +85,47 @@ h2 {
 /* Button Styles */
 
 .btn {
-    display: inline-block;
+    display: block;              /* Make the buttons block-level elements */
     padding: 15px 30px;
-    background-color: #1db954; /* Spotify Green */
+    background-color: #1db954;   /* Spotify Green */
     color: #ffffff;
     text-decoration: none;
     font-size: clamp(1em, 4vw, 1.2em);
     border-radius: 50px;
     transition: background-color 0.3s ease;
-    white-space: nowrap; /* Prevent button text from wrapping */
-    margin: 1em 0.5em;   /* Vertical and horizontal spacing */
+    margin: 1em auto;            /* Center the buttons and add vertical spacing */
+    width: fit-content;          /* Button width adjusts to content */
+    white-space: nowrap;         /* Prevent text from wrapping */
 }
 
 .btn:hover {
-    background-color: #1ed760; /* Lighter Spotify Green */
+    background-color: #1ed760;   /* Lighter Spotify Green */
 }
 
 /* Styles for the second button */
+
 .secondary-btn {
-    background-color: #fa243c; /* Apple Music Red */
+    background-color: #fa243c;   /* Apple Music Red */
 }
 
 .secondary-btn:hover {
-    background-color: #ff4f62; /* Lighter Apple Music Red */
+    background-color: #ff4f62;   /* Lighter Apple Music Red */
 }
 
 /* Styles for the third button */
+
 .tertiary-btn {
     background-color: #6734eb;
 }
 
 .tertiary-btn:hover {
     background-color: #4725a1;
+}
 
 /* Centering the Buttons */
+
 .button-container {
-    text-align: center;
+    text-align: center;          /* Ensure the buttons are centered horizontally */
 }
 
 /* Adjust Button Padding on Small Screens */
@@ -136,7 +141,7 @@ h2 {
 @media (max-width: 480px) {
     .image-wrapper {
         width: 80vw;
-        height: 80vw;       /* Keep width and height equal */
+        height: 80vw;            /* Keep width and height equal */
     }
 }
 
