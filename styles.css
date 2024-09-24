@@ -1,4 +1,4 @@
-/* Base Styles */
+/* General Styles */
 
 body {
     margin: 0;
@@ -7,88 +7,97 @@ body {
     color: #ffffff;
     font-family: 'Arial', sans-serif;
     text-align: center;
-
-    /* Flexbox properties to center content */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;  /* Vertical centering */
-    min-height: 100vh;        /* Full viewport height */
 }
+
+h1, h2 {
+    margin: 0;
+}
+
+/* Band Name at the Top */
+
+.band-name {
+    padding: 20px 0;  /* Padding from the top */
+}
+
+/* Center the Container Vertically */
 
 .container {
-    padding: 20px;  /* Adjusted for better mobile appearance */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  /* Centers vertically */
+    min-height: calc(100vh - 80px); /* Subtract the height of the band-name section */
 }
 
-h1 {
-    font-size: 2.5em;
-    margin-bottom: 0.5em;
-}
+/* Album Name */
 
 h2 {
-    font-size: 1.5em;
+    font-size: 2em;
     margin-bottom: 1em;
     color: #b3b3b3;
 }
 
 /* Image Styles */
 
-img {
-    width: 70vw;             /* 70% of viewport width */
-    max-width: 300px;        /* Maximum width on larger screens */
-    height: auto;
-    margin-bottom: 1.5em;
+.image-wrapper {
+    width: 70vw;
+    max-width: 300px;    /* Limit image size on PC */
+    max-height: 70vw;
+    margin: 0 auto 1.5em auto;
     border-radius: 50%;
+    overflow: hidden;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: auto;
     object-fit: cover;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    aspect-ratio: 1 / 1;
 }
 
 /* Button Styles */
 
 .btn {
     display: inline-block;
-    padding: 12px 24px;
+    padding: 15px 30px;
     background-color: #1db954;
     color: #ffffff;
     text-decoration: none;
     font-size: 1em;
     border-radius: 50px;
     transition: background-color 0.3s ease;
+    margin-top: 1em;
 }
 
 .btn:hover {
     background-color: #1ed760;
 }
 
-/* Media Queries */
+/* Media Queries for Responsive Design */
 
-/* For mobile devices */
+/* Increase text and button size on mobile devices */
 @media (max-width: 600px) {
     h1 {
-        font-size: 3em;        /* Increase heading size */
+        font-size: 2em;
     }
+
     h2 {
-        font-size: 2em;        /* Increase subheading size */
+        font-size: 1.5em;
     }
+
     .btn {
-        padding: 15px 30px;    /* Larger button */
-        font-size: 1.2em;      /* Larger button text */
-    }
-    img {
-        width: 80vw;           /* Slightly larger image */
-        max-width: none;       /* Remove max-width constraint */
+        font-size: 1.2em;
+        padding: 20px 40px;
     }
 }
 
-/* For desktop devices */
-@media (min-width: 1024px) {
-    img {
-        width: 40vw;           /* Smaller image on large screens */
-        max-width: 250px;      /* Adjust max-width */
+/* Adjust image size on larger screens */
+@media (min-width: 768px) {
+    .image-wrapper {
+        width: 30vw;
+        max-width: 250px;  /* Further limit image size on larger screens */
     }
-    .container {
-        padding: 50px;         /* Increase padding */
+
+    h2 {
+        font-size: 2.5em;
     }
 }
