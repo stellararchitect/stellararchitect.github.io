@@ -41,13 +41,13 @@ h1, h2 {
     margin-bottom: 0.5em;
 }
 
-/* Container for Album Name, Image, and Button */
+/* Container for Album Name, Image, and Buttons */
 
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 10px; /* Bring even closer to the title */
+    margin-top: 10px; /* Bring closer to the title */
     padding-bottom: 20px;
 }
 
@@ -85,7 +85,10 @@ h2 {
 /* Button Styles */
 
 .btn {
-    display: inline-block;
+    display: block;
+    width: 80%;
+    max-width: 300px;
+    margin: 1em auto; /* Centers the button and adds vertical spacing */
     padding: 15px 30px;
     background-color: #1db954;
     color: #ffffff;
@@ -93,13 +96,20 @@ h2 {
     font-size: clamp(1em, 4vw, 1.2em);
     border-radius: 50px;
     transition: background-color 0.3s ease;
-    margin-top: 1em;
-    max-width: 90%; /* Prevent button from exceeding screen width */
     white-space: normal; /* Allow button text to wrap if necessary */
 }
 
 .btn:hover {
     background-color: #1ed760;
+}
+
+/* Styles for the second button */
+.secondary-btn {
+    background-color: #535353; /* Different background color */
+}
+
+.secondary-btn:hover {
+    background-color: #6b6b6b; /* Hover effect for the second button */
 }
 
 /* Adjust Button Padding on Small Screens */
