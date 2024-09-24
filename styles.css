@@ -87,7 +87,7 @@ h2 {
 .btn {
     display: inline-block;
     padding: 15px 30px;
-    background-color: #1db954;
+    background-color: #1db954; /* Spotify Green */
     color: #ffffff;
     text-decoration: none;
     font-size: clamp(1em, 4vw, 1.2em);
@@ -98,17 +98,25 @@ h2 {
 }
 
 .btn:hover {
-    background-color: #1ed760;
+    background-color: #1ed760; /* Lighter Spotify Green */
 }
 
 /* Styles for the second button */
 .secondary-btn {
-    background-color: #6734eb; /* Different background color */
+    background-color: #fa243c; /* Apple Music Red */
 }
 
 .secondary-btn:hover {
-    background-color: #6b6b6b; /* Hover effect for the second button */
+    background-color: #ff4f62; /* Lighter Apple Music Red */
 }
+
+/* Styles for the third button */
+.tertiary-btn {
+    background-color: #6734eb;
+}
+
+.tertiary-btn:hover {
+    background-color: #4725a1;
 
 /* Centering the Buttons */
 .button-container {
