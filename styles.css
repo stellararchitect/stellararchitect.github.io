@@ -1,3 +1,11 @@
+/* Custom Font Definition */
+@font-face {
+    font-family: 'CustomFont';
+    src: url('fonts/font.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* Global Styles */
 
 * {
@@ -25,7 +33,6 @@ h1, h2 {
 
 .band-name {
     padding: 20px 0; /* Padding from the top */
-    /* Remove font-size and margin-bottom to avoid conflicts */
 }
 
 .band-name h1 {
@@ -57,16 +64,22 @@ h2 {
 
 .image-wrapper {
     width: 70vw;
-    max-width: 250px; /* Reduce max-width for smaller desktops */
+    max-width: 250px;       /* Limit size on larger screens */
+    height: 70vw;           /* Ensure the container is square */
+    max-height: 250px;      /* Match max-width for consistency */
     margin: 0 auto 1.5em auto;
     border-radius: 50%;
     overflow: hidden;
+    position: relative;     /* Required for absolute positioning of the image */
 }
 
 .image-wrapper img {
     width: 100%;
-    height: auto;
-    object-fit: cover;
+    height: 100%;
+    object-fit: cover;      /* Scale the image to cover the container */
+    position: absolute;     /* Position the image within the container */
+    top: 0;
+    left: 0;
 }
 
 /* Button Styles */
@@ -102,6 +115,7 @@ h2 {
 @media (max-width: 480px) {
     .image-wrapper {
         width: 80vw;
+        height: 80vw;       /* Keep width and height equal */
     }
 }
 
@@ -111,12 +125,3 @@ h2 {
     max-width: 100%;
     overflow-wrap: break-word;
 }
-
-/* Custom Font Definition */
-@font-face {
-    font-family: 'CustomFont';
-    src: url('fonts/font.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
