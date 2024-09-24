@@ -85,10 +85,7 @@ h2 {
 /* Button Styles */
 
 .btn {
-    display: block;
-    width: 80%;
-    max-width: 300px;
-    margin: 1em auto; /* Centers the button and adds vertical spacing */
+    display: inline-block;
     padding: 15px 30px;
     background-color: #1db954;
     color: #ffffff;
@@ -96,7 +93,8 @@ h2 {
     font-size: clamp(1em, 4vw, 1.2em);
     border-radius: 50px;
     transition: background-color 0.3s ease;
-    white-space: normal; /* Allow button text to wrap if necessary */
+    white-space: nowrap; /* Prevent button text from wrapping */
+    margin: 1em 0.5em;   /* Vertical and horizontal spacing */
 }
 
 .btn:hover {
@@ -110,6 +108,11 @@ h2 {
 
 .secondary-btn:hover {
     background-color: #6b6b6b; /* Hover effect for the second button */
+}
+
+/* Centering the Buttons */
+.button-container {
+    text-align: center;
 }
 
 /* Adjust Button Padding on Small Screens */
