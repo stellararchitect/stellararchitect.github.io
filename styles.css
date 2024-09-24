@@ -5,6 +5,12 @@ body {
     color: #ffffff;
     font-family: 'Arial', sans-serif;
     text-align: center;
+
+    /* Flexbox properties to center content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* Vertical centering */
+    min-height: 100vh;        /* Ensure body takes up full viewport height */
 }
 
 .container {
