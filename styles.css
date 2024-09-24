@@ -12,14 +12,25 @@
     box-sizing: border-box;
 }
 
-body {
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
     background-color: #0e0e0e;
     color: #ffffff;
     font-family: 'Arial', sans-serif;
     text-align: center;
     overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Main Content should expand */
+.container {
+    flex: 1; /* Allows the container to grow and fill available space */
 }
 
 h1, h2 {
@@ -49,6 +60,7 @@ h1, h2 {
     align-items: center;
     margin-top: 10px; /* Bring closer to the title */
     padding-bottom: 20px;
+    flex: 1; /* Allows the container to grow and fill available space */
 }
 
 /* Responsive Album Name Font Size */
@@ -115,17 +127,41 @@ h2 {
 /* Styles for the third button */
 
 .tertiary-btn {
-    background-color: #6734eb;
+    background-color: #6734eb;   /* Custom Purple Color */
 }
 
 .tertiary-btn:hover {
-    background-color: #4725a1;
+    background-color: #4725a1;   /* Darker Purple */
 }
 
 /* Centering the Buttons */
 
 .button-container {
     text-align: center;          /* Ensure the buttons are centered horizontally */
+}
+
+/* Footer Styles */
+
+footer {
+    background-color: #0e0e0e; /* Matches the page background */
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #b3b3b3;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+footer a:hover {
+    color: #ffffff;
 }
 
 /* Adjust Button Padding on Small Screens */
